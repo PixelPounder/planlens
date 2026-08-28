@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-28T04:20:00.327Z",
+      "type": "scheduled_cron_watch",
+      "drill": "forced_failure",
+      "run_url": "https://cursor.com/agents/bc-eaff43b0-cb56-477d-9d58-81192a938238",
+      "result": "failed",
+      "notes": "FORCED FAILURE DRILL (LAUNCH.md scheduled-run-fails). Public signals OK. gh issue list --sort rejected; not recovered in this run. Polar skipped (no env creds). Marketplaces not listed. Owner not interrupted. Recovery expected on next scheduled run."
+    }
+  ]
 }
