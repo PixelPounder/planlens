@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,13 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-28T03:55:00.489Z",
+      "type": "scheduled_cron_watch",
+      "run_url": "https://cursor.com/agents/bc-ab6784c0-e599-4eb9-8fae-a6d981dca76a",
+      "result": "passed",
+      "notes": "Cursor Cloud cron */5. Public signals unchanged. 0 open GitHub issues. Polar skipped (no env creds). Marketplaces not listed. gh --sort flag error recorded and recovered."
+    }
+  ]
 }
