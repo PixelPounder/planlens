@@ -1,11 +1,27 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-08-28T02:50:23.435Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "automation": {
+    "id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "trigger": "cron",
+    "schedule": "*/5 * * * *",
+    "runtime": "cursor_cloud",
+    "owner_session": false
+  },
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues": [],
+  "github_issues_note": "gh issue list succeeded (open issues, newest via default order). Initial attempt with --sort failed: unknown flag.",
+  "github_errors": [
+    {
+      "command": "gh issue list --sort created",
+      "error": "unknown flag: --sort"
+    }
+  ],
   "polar_checked": false,
+  "polar_note": "No Polar credentials in environment; skipped API.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx are not_listed; no listing URLs to fetch.",
   "signals": {
     "terraform": {
       "tag": "v1.16.0",
@@ -28,28 +44,14 @@
       "html_url": "https://github.com/hashicorp/vscode-terraform/releases/tag/v2.40.0"
     }
   },
-  "changed": [
-    {
-      "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
-    },
-    {
-      "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
-    }
-  ],
+  "changed": [],
   "errors": [],
-  "owner_interrupt_required": false
+  "severity": null,
+  "owner_interrupt_required": false,
+  "actions_taken": [
+    "Public-signal watch completed; no upstream release tag changes.",
+    "GitHub Issues inbox empty.",
+    "Polar API skipped (no session credentials).",
+    "Marketplace counts skipped (not listed)."
+  ]
 }
