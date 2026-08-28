@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,17 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-28T15:11:23.476Z",
+      "type": "scheduled_watch",
+      "result": "passed",
+      "run_id": "bc-04faaca8-6077-4bbf-857f-050851f4dcb5",
+      "run_url": "https://cursor.com/agents/bc-04faaca8-6077-4bbf-857f-050851f4dcb5",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "trigger": "cron",
+      "runtime": "cursor_cloud",
+      "notes": "Public signals unchanged. gh issue list returned 0 open issues. Polar skipped (no env creds). Marketplaces not listed."
+    }
+  ]
 }
