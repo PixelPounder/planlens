@@ -1,11 +1,21 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-08-28T02:25:18.105Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "automation": {
+    "trigger": "cron",
+    "schedule": "*/5 * * * *",
+    "runtime": "cursor_cloud",
+    "run_url": "https://cursor.com/agents/bc-63ff0a4f-42a9-4764-8441-4ef7a993e802",
+    "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025"
+  },
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues_open": 0,
+  "github_issues_note": "gh issue list succeeded; no open issues. Initial --sort flag rejected by gh CLI; retried with --json.",
   "polar_checked": false,
+  "polar_note": "No Polar credentials in environment; skipped per WATCH.md.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx not_listed in STATE.json; skipped.",
   "signals": {
     "terraform": {
       "tag": "v1.16.0",
@@ -28,28 +38,9 @@
       "html_url": "https://github.com/hashicorp/vscode-terraform/releases/tag/v2.40.0"
     }
   },
-  "changed": [
-    {
-      "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
-    },
-    {
-      "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
-    }
-  ],
+  "changed": [],
   "errors": [],
-  "owner_interrupt_required": false
+  "owner_interrupt_required": false,
+  "severity": null,
+  "action_taken": "routine_watch_no_issues"
 }
