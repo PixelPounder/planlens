@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -14,12 +14,20 @@
     "scheduled_run_failed_and_recovered": "undemonstrated"
   },
   "simulated_incident": {
-    "status": "undemonstrated",
-    "issue_url": null,
-    "discovered_by": null,
-    "classified_as": null,
-    "surfaced_on": null,
-    "owner_interrupted": null
+    "status": "passed",
+    "issue_url": "https://github.com/PixelPounder/planlens/issues/3",
+    "discovered_by": "cursor_automation_scheduled_watch",
+    "classified_as": "drill / SEV3",
+    "surfaced_on": "ops/watch/PROOF.json commit (gh issue comment blocked: integration token lacks issues:write)",
+    "owner_interrupted": false
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-28T03:10:18.287Z",
+      "scenario": "simulated_incident",
+      "result": "passed",
+      "run_url": "https://cursor.com/agents/bc-90d0305e-f28b-4c59-8043-81655b892bdc",
+      "notes": "Scheduled automation discovered issue #3, classified drill/SEV3, no owner interrupt. GitHub comment/close failed (integration permissions); proof recorded via repo commit."
+    }
+  ]
 }
