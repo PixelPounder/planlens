@@ -1,0 +1,125 @@
+{
+  "name": "planlens",
+  "displayName": "Planlens",
+  "description": "Review plans for Terraform and OpenTofu as a structured diff. Values marked sensitive by the plan are redacted. Plan JSON is not uploaded by Planlens. Not affiliated with HashiCorp.",
+  "version": "0.1.4",
+  "publisher": "planlens",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixelPounder/planlens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PixelPounder/planlens/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Visualization", "Other"],
+  "keywords": [
+    "terraform",
+    "opentofu",
+    "tofu",
+    "plan",
+    "iac",
+    "diff",
+    "review"
+  ],
+  "activationEvents": [
+    "onCommand:planlens.reviewActiveFile",
+    "onCommand:planlens.reviewFile",
+    "onCommand:planlens.runPlan",
+    "onCommand:planlens.copyDiagnostics"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "planlens.reviewActiveFile",
+        "title": "Planlens: Review Active Plan JSON"
+      },
+      {
+        "command": "planlens.reviewFile",
+        "title": "Planlens: Open Plan JSON"
+      },
+      {
+        "command": "planlens.runPlan",
+        "title": "Planlens: Run Plan"
+      },
+      {
+        "command": "planlens.copyMarkdown",
+        "title": "Planlens: Copy PR Markdown"
+      },
+      {
+        "command": "planlens.comparePlans",
+        "title": "Planlens: Compare With Another Plan"
+      },
+      {
+        "command": "planlens.enterLicense",
+        "title": "Planlens: Enter License Key"
+      },
+      {
+        "command": "planlens.copyDiagnostics",
+        "title": "Planlens: Copy Diagnostics"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "planlens.reviewFile",
+          "when": "resourceFilename =~ /tfplan/i && resourceExtname == .json",
+          "group": "planlens"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "planlens.reviewActiveFile",
+          "when": "resourceFilename =~ /tfplan/i && resourceExtname == .json",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Planlens",
+      "properties": {
+        "planlens.licenseKey": {
+          "type": "string",
+          "default": "",
+          "description": "Planlens Pro license key from Polar."
+        },
+        "planlens.polarOrganizationId": {
+          "type": "string",
+          "default": "",
+          "description": "Polar organization id used to validate license keys. Set at publish time."
+        },
+        "planlens.checkoutUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Checkout URL for Planlens Pro. Set after Polar product exists."
+        },
+        "planlens.binary": {
+          "type": "string",
+          "enum": ["auto", "terraform", "tofu"],
+          "default": "auto",
+          "description": "Which CLI Planlens may run for Planlens: Run Plan. Auto tries tofu, then terraform. Uses the first matching binary on the editor process PATH (not .cmd/.bat). Refuses a binary whose path is inside the workspace."
+        },
+        "planlens.devUnlock": {
+          "type": "boolean",
+          "default": false,
+          "description": "Ignored except when running the extension in development mode."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test --test-concurrency=1 out/test/parsePlan.test.js out/test/adversarial.test.js out/test/pathResolution.test.js out/test/extensionRuntime.test.js out/test/activeUri.test.js out/test/diagnostics.test.js",
+    "package": "npm run compile && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --skip-license"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.8.0"
+  }
+}

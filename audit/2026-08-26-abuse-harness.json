@@ -1,0 +1,304 @@
+{
+  "ran_at": "2026-08-27T01:34:17.554Z",
+  "failed": 0,
+  "results": [
+    {
+      "id": "null-resource-entries-do-not-throw",
+      "ok": true,
+      "detail": "friendly: Plan resource_changes contains a non-object entry."
+    },
+    {
+      "id": "empty-resource-object",
+      "ok": true
+    },
+    {
+      "id": "bigint-in-object-rejected-or-handled",
+      "ok": true,
+      "detail": "threw: Do not know how to serialize a BigInt"
+    },
+    {
+      "id": "wide-array-20000-parse-time",
+      "ok": true,
+      "detail": "12ms, 20000 attribute changes"
+    },
+    {
+      "id": "2mb-unmarked-string-in-html",
+      "ok": true,
+      "detail": "html 2006722 bytes in 7ms (unmarked secret would ship into webview)"
+    },
+    {
+      "id": "xss-payload:</script><script>alert(1)</script>",
+      "ok": true,
+      "detail": "html 7005 md has payload: true"
+    },
+    {
+      "id": "xss-payload:<!--",
+      "ok": true,
+      "detail": "html 6805 md has payload: true"
+    },
+    {
+      "id": "xss-payload:<img src=x onerror=alert(1)>",
+      "ok": true,
+      "detail": "html 6925 md has payload: true"
+    },
+    {
+      "id": "xss-payload:\"><img src=x>",
+      "ok": true,
+      "detail": "html 6855 md has payload: true"
+    },
+    {
+      "id": "xss-payload:  ",
+      "ok": true,
+      "detail": "html 6770 md has payload: true"
+    },
+    {
+      "id": "xss-payload:</script><svg onload=alert(1)>",
+      "ok": true,
+      "detail": "html 6960 md has payload: true"
+    },
+    {
+      "id": "xss-payload:{{constructor.constructor('alert(1)')()}",
+      "ok": true,
+      "detail": "html 6965 md has payload: true"
+    },
+    {
+      "id": "xss-payload:javascript:alert(1)",
+      "ok": true,
+      "detail": "html 6855 md has payload: true"
+    },
+    {
+      "id": "xss-payload:<iframe src=https://evil.test>",
+      "ok": true,
+      "detail": "html 6935 md has payload: true"
+    },
+    {
+      "id": "checkout:https://polar.sh/planlens",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://buy.polar.sh/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:HTTPS://POLAR.SH/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://polar.sh",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://user:pass@polar.sh/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://polar.sh.evil.com/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://evil.com/@polar.sh",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh%2eevil.com/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://notpolar.sh/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://evilpolar.sh/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:http://polar.sh/x",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh.evil.com",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://127.0.0.1/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://localhost/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:javascript:alert(1)",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:file:///C:/Windows/notepad.exe",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh.evil.com",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh%00.evil.com",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh./x",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh%2f@evil.com",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://evil.com#polar.sh",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://polar.sh\\@evil.com",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://xn--plar-0na.sh/",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:https://sub.sub.polar.sh/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://polar.sh:443/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:https://polar.sh:444/x",
+      "ok": true,
+      "detail": "got true expected true"
+    },
+    {
+      "id": "checkout:data:text/html,https://polar.sh",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "checkout:(empty)",
+      "ok": true,
+      "detail": "got false expected false"
+    },
+    {
+      "id": "license-no-fetch-without-org",
+      "ok": true,
+      "detail": "{\"pro\":false,\"message\":\"Polar organization id is not configured yet.\"}"
+    },
+    {
+      "id": "license-no-fetch-without-key",
+      "ok": true,
+      "detail": "{\"pro\":false,\"message\":\"No license key.\"}"
+    },
+    {
+      "id": "license-fetch-body-is-key-and-org-only",
+      "ok": true,
+      "detail": "{\"url\":\"https://api.polar.sh/v1/customer-portal/license-keys/validate\",\"init\":{\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"key\\\":\\\"key-2\\\",\\\"organization_id\\\":\\\"org-9\\\"}\",\"signal\":{}}}"
+    },
+    {
+      "id": "license-granted-unlocks-pro",
+      "ok": true,
+      "detail": "{\"pro\":true}"
+    },
+    {
+      "id": "polar-live-dummy-post",
+      "ok": true,
+      "detail": "HTTP 422 body-start={\"error\":\"RequestValidationError\",\"detail\":[{\"type\":\"uuid_parsing\",\"loc\":[\"body\",\"organization_id\"],\"msg\":\"Input should be a valid UUID, invalid character: found `p` at 1\",\"input\":"
+    },
+    {
+      "id": "license-fetch-throw-swallowed",
+      "ok": true
+    },
+    {
+      "id": "license-non-json-200-swallowed",
+      "ok": true
+    },
+    {
+      "id": "path-hijack-outside-workspace-wins",
+      "ok": true,
+      "detail": "resolved=C:\\Users\\kelly\\AppData\\Local\\Temp\\pl-path-hijack-MDuAsV\\terraform.exe fake=C:\\Users\\kelly\\AppData\\Local\\Temp\\pl-path-hijack-MDuAsV\\terraform.exe (if true, first PATH terraform.exe is trusted)"
+    },
+    {
+      "id": "path-hijack-not-blocked-as-workspace",
+      "ok": true,
+      "detail": "outside-workspace binary accepted"
+    },
+    {
+      "id": "workspace-binary-on-path-refused",
+      "ok": true,
+      "detail": "Error: Refusing to run C:\\Users\\kelly\\AppData\\Local\\Temp\\pl-ws-mj0QbK\\terraform.exe because it is inside the workspace. Planlens only runs terraform/tofu from your system PATH, not from the project fo"
+    },
+    {
+      "id": "cmd-shim-not-selected",
+      "ok": true,
+      "detail": "resolved=C:\\Users\\kelly\\AppData\\Local\\Temp\\pl-cmd-ruCAMD\\terraform.exe"
+    },
+    {
+      "id": "junction-path-into-workspace",
+      "ok": true,
+      "detail": "resolved=C:\\Users\\kelly\\AppData\\Local\\Temp\\pl-junc-2OJ4Xq\\link\\terraform.exe blockedByWorkspaceCheck=false "
+    },
+    {
+      "id": "missing-binary-throws",
+      "ok": true,
+      "detail": "Error: terraform was not found on PATH."
+    },
+    {
+      "id": "oversize-file-refused",
+      "ok": true,
+      "detail": "Error: Plan file is 33554433 bytes. Planlens refuses files larger than 33554432 bytes."
+    },
+    {
+      "id": "temp-dir-created",
+      "ok": true
+    },
+    {
+      "id": "temp-dir-removed",
+      "ok": true
+    },
+    {
+      "id": "vsix-polar-url-matches-source",
+      "ok": true,
+      "detail": "https://api.polar.sh/v1/customer-portal/license-keys/validate"
+    },
+    {
+      "id": "engine-semicolon",
+      "ok": true
+    },
+    {
+      "id": "engine-path",
+      "ok": true
+    }
+  ]
+}

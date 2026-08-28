@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planlens privacy</title>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1.5; color: #1a1a1a; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: 24px; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="./index.html">Planlens</a></p>
+    <h1>Privacy policy</h1>
+    <p>Last updated: 2026-08-27</p>
+    <p>Planlens reviews Terraform and OpenTofu plan JSON inside your editor.</p>
+    <h2>No first-party telemetry</h2>
+    <p>The packaged Planlens extension does not include first-party telemetry, analytics, crash reporting, usage tracking, or advertising identifiers. Planlens does not send install counts, feature-usage events, or plan contents to infrastructure we operate. The only Planlens-initiated HTTP client is Polar license validation, described below. This was verified for 0.1.3 by inspecting the packaged VSIX JavaScript and is the standing rule for later versions unless this page is updated in the same release as a network change.</p>
+    <h2>Processed locally</h2>
+    <p>Plan files you open, and the JSON from Run Plan, are parsed on your computer. Planlens does not upload plan JSON. Values Terraform/OpenTofu mark sensitive are redacted. Secrets not marked sensitive can still appear in the review UI.</p>
+    <h2>Network</h2>
+    <p>Opening a plan JSON file does not make a Planlens network call. If you enter a Planlens Pro license key, or you invoke a Pro command, and a Polar organization id is configured, Planlens POSTs that key and organization id to <code>https://api.polar.sh/v1/customer-portal/license-keys/validate</code>. That request does not include plan JSON, source code, or environment variables.</p>
+    <p><strong>Planlens: Copy Diagnostics</strong> copies a redacted environment report to your clipboard. It does not make a Planlens network call. The report includes editor/OS versions and whether a license key is present. It does not include the license key, plan JSON, PATH, or workspace paths.</p>
+    <p>Run Plan executes the first matching <code>terraform</code>/<code>tofu</code> binary on the editor process PATH after you confirm. Those CLIs may contact providers, backends, and registries, and may execute provider plugins from the working directory, according to your configuration. That traffic is not sent to Planlens. Planlens does not upload plan JSON. Cursor, VS Code, and the extension marketplace make their own network calls outside Planlens’s control.</p>
+    <h2>Support submissions</h2>
+    <p>If you paste diagnostics or issue text into GitHub, that content is public and is not sent by the extension itself. Do not paste license keys, plan JSON, or Terraform source. Purchases are handled by Polar as merchant of record. Polar’s privacy policy applies to checkout.</p>
+    <h2>Accounts</h2>
+    <p>Purchases are handled by Polar as merchant of record. Polar’s privacy policy applies to checkout.</p>
+  </main>
+</body>
+</html>

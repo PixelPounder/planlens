@@ -1,0 +1,29 @@
+{
+  "audit_id": "planlens-prepublish-2026-08-26",
+  "decision": "READY TO PUBLISH",
+  "capital_committed_cad": 0,
+  "tests": {
+    "command": "npm test",
+    "result": "15 pass / 0 fail",
+    "files": [
+      "src/test/parsePlan.test.ts",
+      "src/test/adversarial.test.ts"
+    ]
+  },
+  "static_inspection": {
+    "runtime_dependencies": "none (devDependencies only: typescript, @types/node, @types/vscode)",
+    "vsix": "planlens/extension/planlens-0.1.1.vsix",
+    "vsix_contains_tests": false,
+    "network_urls_in_src": [
+      "https://api.polar.sh/v1/customer-portal/license-keys/validate"
+    ],
+    "process_api": "child_process.execFile only (no exec, no shell)",
+    "binary_locator_windows": "C:\\Windows\\System32\\where.exe",
+    "binary_locator_posix": "/usr/bin/which"
+  },
+  "extension_host_e2e": "not run — no automated VS Code/Cursor host in this audit",
+  "security_review_subagent": "could not complete: workspace is not a git repository",
+  "hashiCorp_trademark_source": "https://www.hashicorp.com/trademark-policy (search excerpt 2026-08-26; live fetch challenged)",
+  "openvsx_license_source": "https://www.eclipse.org/legal/open-vsx-registry-faq/",
+  "vscode_marketplace_source": "https://code.visualstudio.com/api/working-with-extensions/publishing-extension"
+}

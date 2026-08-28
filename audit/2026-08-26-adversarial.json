@@ -1,0 +1,69 @@
+{
+  "audit_id": "planlens-adversarial-2026-08-26",
+  "decision": "READY FOR HUMAN ACCEPTANCE TEST",
+  "version": "0.1.2",
+  "vsix": "planlens/extension/planlens-0.1.2.vsix",
+  "capital_committed_cad": 0,
+  "automated_tests": {
+    "command": "npm test",
+    "result": "28 pass / 0 fail",
+    "files": [
+      "src/test/parsePlan.test.ts",
+      "src/test/adversarial.test.ts",
+      "src/test/pathResolution.test.ts",
+      "src/test/extensionRuntime.test.ts"
+    ]
+  },
+  "abuse_harness": {
+    "command": "node planlens/audit/abuse-harness.mjs",
+    "result": "61 pass / 0 fail (after 0.1.2 fixes)",
+    "evidence": "planlens/audit/2026-08-26-abuse-harness.json"
+  },
+  "vsix_inspection": {
+    "files": 11,
+    "size_kb": 16.65,
+    "contains_tests": false,
+    "contains_node_modules": false,
+    "runtime_dependencies": "none",
+    "https_urls_in_packaged_js": [
+      "https://api.polar.sh/v1/customer-portal/license-keys/validate"
+    ],
+    "process_api": "child_process.execFile only"
+  },
+  "cursor_host": {
+    "cli": "Cursor 3.14.7",
+    "isolated_install": "planlens.planlens@0.1.2 installed into %TEMP%\\planlens-cursor-ex-012 (not the user profile)",
+    "isolated_launch": "opened fixtures/sample-plan.json; json language features activated; planlens did not activate (activation is onCommand only)",
+    "command_invocation": "not performed — Cursor CLI has no --execute-command; no terraform/tofu on PATH",
+    "platform_traffic_observed_in_exthost_log": "Cursor itself contacted api2.cursor.sh; that is not Planlens"
+  },
+  "polar_live": {
+    "url": "https://api.polar.sh/v1/customer-portal/license-keys/validate",
+    "method": "POST",
+    "body": { "key": "planlens-audit-dummy-key", "organization_id": "planlens-audit-dummy-org" },
+    "response": "HTTP 422 RequestValidationError uuid_parsing on organization_id",
+    "plan_json_sent": false
+  },
+  "path_hijack": {
+    "outside_workspace_first_PATH_exe": "succeeds (same as a terminal); residual accepted with disclosure",
+    "workspace_plant": "refused",
+    "cmd_shim_first": "skipped; terraform.exe later on PATH is used",
+    "junction_PATH_into_workspace": "workspace check does not follow junctions; requires write access to a PATH directory — treated as equivalent to dropping terraform.exe on PATH"
+  },
+  "defects_fixed_in_0_1_2": [
+    "flattenDiff spread of large arrays crashed with Maximum call stack size exceeded (200k items)",
+    "null resource_changes entries threw TypeError",
+    "validatePolarLicense threw on network failure and non-JSON 200, which would break review after Polar org id is baked",
+    "HTTP 200 with status active/missing unlocked Pro; Polar docs only grant/revoked/disabled — now requires granted",
+    "opening a plan called Polar if a key was stored",
+    "where.exe miss surfaced as INFO: Could not find files...",
+    "terraform.cmd first on PATH failed closed instead of skipping to .exe",
+    "site meta description overclaimed secrets redacted / JSON never leaves"
+  ],
+  "attacks_that_still_succeed_by_design_or_residual": [
+    "unmarked secrets appear in HTML/markdown",
+    "first PATH terraform.exe outside workspace is executed after Run Plan confirm",
+    "Run Plan in a malicious repo executes that repo's provider plugins via the real terraform CLI",
+    "2 MiB unmarked string is injected into the webview HTML (file still under 32 MiB cap)"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.9.8",
+  "applyable": true,
+  "complete": true,
+  "errored": false,
+  "resource_changes": [
+    {
+      "address": "aws_instance.web",
+      "mode": "managed",
+      "type": "aws_instance",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "ami": "ami-old",
+          "instance_type": "t3.micro",
+          "tags": { "Name": "web" }
+        },
+        "after": {
+          "ami": "ami-old",
+          "instance_type": "t3.small",
+          "tags": { "Name": "web" }
+        },
+        "after_unknown": {},
+        "before_sensitive": {},
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_db_instance.main",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "main",
+      "change": {
+        "actions": ["delete", "create"],
+        "before": { "engine": "postgres", "instance_class": "db.t3.micro", "password": "should-never-show" },
+        "after": { "engine": "postgres", "instance_class": "db.t3.small", "password": "should-never-show" },
+        "after_unknown": { "id": true },
+        "before_sensitive": { "password": true },
+        "after_sensitive": { "password": true }
+      },
+      "action_reason": "replace_because_cannot_update"
+    },
+    {
+      "address": "module.network.aws_security_group.app",
+      "module_address": "module.network",
+      "mode": "managed",
+      "type": "aws_security_group",
+      "name": "app",
+      "change": {
+        "actions": ["delete"],
+        "before": { "name": "app", "ingress": [{ "from_port": 80, "to_port": 80 }] },
+        "after": null,
+        "after_unknown": {},
+        "before_sensitive": {},
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_iam_role.api",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "api",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": { "name": "api", "assume_role_policy": "{}" },
+        "after_unknown": { "arn": true, "id": true },
+        "before_sensitive": {},
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_s3_bucket.logs",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "logs",
+      "change": {
+        "actions": ["no-op"],
+        "before": { "bucket": "logs" },
+        "after": { "bucket": "logs" },
+        "after_unknown": {},
+        "before_sensitive": {},
+        "after_sensitive": {}
+      }
+    }
+  ]
+}

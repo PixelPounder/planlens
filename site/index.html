@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planlens — Terraform and OpenTofu plan review</title>
+  <meta name="description" content="Review Terraform and OpenTofu plans as a structured diff in Cursor and VS Code. Plan-marked sensitive values are redacted. Planlens does not upload plan JSON. Not affiliated with HashiCorp." />
+  <style>
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1 { font-size: 28px; font-weight: 650; margin: 0 0 8px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; }
+    p, li { color: #333; }
+    .muted { color: #666; }
+    .price { font-size: 22px; font-weight: 650; margin: 16px 0; }
+    a { color: #0b57d0; }
+    code { font-family: ui-monospace, monospace; font-size: 0.92em; }
+    pre {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 12px 14px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="muted">Planlens</p>
+    <h1>Read the plan before you apply it.</h1>
+    <p>Open JSON from <code>terraform show -json</code> or <code>tofu show -json</code>. Planlens lists creates, updates, destroys, and replacements. Values the plan marks sensitive are redacted. Unmarked secrets in a plan can still appear. Plan JSON is not uploaded by Planlens.</p>
+    <p class="muted">Planlens is not affiliated with HashiCorp. Terraform is a HashiCorp trademark. OpenTofu is a Linux Foundation trademark.</p>
+    <p class="price">Free review. Pro is $49 once.</p>
+    <p class="muted">Install from the VS Code Marketplace or OpenVSX (Cursor). Checkout link is added when Polar is live.</p>
+
+    <h2>Free</h2>
+    <ul>
+      <li>Open a plan JSON file in Cursor or VS Code</li>
+      <li>Filter and search resource changes</li>
+      <li>Plan-marked sensitive values redacted (unmarked secrets can still appear)</li>
+      <li>Planlens does not upload plan JSON</li>
+    </ul>
+
+    <h2>Pro</h2>
+    <ul>
+      <li>Run <code>terraform</code> or <code>tofu</code> plan from the editor</li>
+      <li>Copy a PR markdown summary</li>
+      <li>Compare two plans</li>
+      <li>Danger digest for destroys, replacements, IAM, network, and data stores</li>
+    </ul>
+
+    <h2>Produce a plan JSON</h2>
+    <pre><code>terraform plan -out=plan.bin
+terraform show -json plan.bin &gt; tfplan.json</code></pre>
+
+    <p><a href="./privacy.html">Privacy</a></p>
+    <h2>Support</h2>
+    <p>In the editor: Command Palette → <strong>Planlens: Copy Diagnostics</strong>. That copies a redacted report to the clipboard. It does not send network traffic. Do not paste license keys, plan JSON, or Terraform source. Then open a <a href="https://github.com/PixelPounder/planlens/issues">GitHub issue</a>.</p>
+    <p class="muted">Planlens is not listed on the VS Code Marketplace or OpenVSX yet. Do not paste license keys or plan JSON into issues.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-27",
+  "phase": "github_support_repo_created",
+  "product": {
+    "name": "Planlens",
+    "summary": "Paid Cursor/VS Code extension that reviews Terraform/OpenTofu plan JSON locally.",
+    "price_usd_one_time": 49,
+    "path": "planlens/extension",
+    "publisher_placeholder": "planlens"
+  },
+  "version": {
+    "extension": "0.1.4",
+    "vsix": "planlens/extension/planlens-0.1.4.vsix",
+    "vsix_note": "0.1.4 packed with Copy Diagnostics. HAT was on 0.1.3; Copy Diagnostics is Low/Medium — clipboard only, no HAT required.",
+    "site_privacy_last_updated": "2026-08-27"
+  },
+  "privacy": {
+    "first_party_telemetry": false,
+    "plan_json_uploaded": false,
+    "planlens_http": "POST https://api.polar.sh/v1/customer-portal/license-keys/validate with {key, organization_id} only on license entry or Pro command when org id is set",
+    "copy_diagnostics": "clipboard only, user-initiated, no network"
+  },
+  "polar": {
+    "organization_name": "Planlens",
+    "seller": "individual",
+    "country": "Canada",
+    "catalog_currency": "USD",
+    "organization_id": "cebaae84-8f83-464d-9c37-b2334be20b3e",
+    "product_created": true,
+    "product_id": null,
+    "checkout_url": "https://buy.polar.sh/polar_cl_IpS0nHpyjmrlnmt4oCV1QHLppMXzpQj4h3gmc0iF0nK",
+    "checkout_url_allowlisted": true,
+    "kyc": "identity_verified",
+    "payout_account": "connected",
+    "describe_what_you_sell": "completed_by_owner_text_not_captured"
+  },
+  "marketplaces": {
+    "vscode": "not_listed",
+    "openvsx": "not_listed",
+    "publisher_id": null
+  },
+  "support": {
+    "public_inbox": "https://github.com/PixelPounder/planlens/issues",
+    "repo": "https://github.com/PixelPounder/planlens",
+    "security_advisories": "https://github.com/PixelPounder/planlens/security/advisories/new",
+    "channel": "GitHub Issues",
+    "in_product": "Planlens: Copy Diagnostics",
+    "status": "inbox_public_repo_exists"
+  },
+  "watch": {
+    "script": "planlens/ops/watch/check.mjs",
+    "last_run": "2026-08-27T11:58:24.639Z",
+    "cursor_automation": "not_created",
+    "unattended_demonstrated": false,
+    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+  },
+  "deferred_tests": [
+    "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
+    "Polar license validation with a real granted key"
+  ],
+  "known_risks": [
+    "Silent client failures are invisible without telemetry. Accepted.",
+    "PATH hijack outside the workspace is treated like a terminal. Disclosed, not Authenticode.",
+    "Run Plan executes provider plugins in the working directory. No apply.",
+    "Marketplace discovery is the main business failure mode."
+  ],
+  "launch_blockers": [
+    "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
+    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
+    "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
+    "Microsoft VS Code Marketplace publisher agreement + listing",
+    "OpenVSX publisher + listing for Cursor",
+    "LICENSE / publisher legal name before public listing",
+    "Deferred tests still open: real terraform Run Plan; real Polar granted key"
+  ],
+  "launch_authorization": {
+    "payout_complete_authorizes_listing": false,
+    "customers_may_install": false,
+    "github_support_live": true,
+    "unattended_loop_demonstrated": false,
+    "simulated_incident_passed": false,
+    "protocol": "planlens/ops/LAUNCH.md",
+    "proof": "planlens/ops/watch/PROOF.json"
+  },
+  "metrics": {
+    "installs_vscode": null,
+    "installs_openvsx": null,
+    "orders": 0,
+    "refunds": 0,
+    "listed_at": null,
+    "day_90_review_at": null
+  },
+  "hurdle": {
+    "cover": "Cursor Ultra ~USD $200/month",
+    "capital_authorized_cad": 500,
+    "capital_committed_cad": 0,
+    "kill_if": "90 days after listing: ~0 installs → kill discovery; installs ≥100 and 0 orders → pivot/kill; 1–4 orders → +30 days if reviews are not hostile; ≥5 paid and no security incident → continue"
+  },
+  "next_owner_action": "After GitHub files are on origin: Polar Account Review → Add product website = https://github.com/PixelPounder/planlens (the repo, not a bought domain). Do not add a personal support email. Do not Submit for review. Do not list.",
+  "next_agent_action_after_github_push": "Confirm Issues templates and SECURITY.md on origin. Private vulnerability reporting if the API allows. Then Polar website field. Support email and Submit for review stay later."
+}

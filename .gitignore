@@ -1,0 +1,4 @@
+extension/node_modules/
+extension/out/
+**/*.vsix
+.DS_Store

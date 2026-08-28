@@ -1,0 +1,50 @@
+{
+  "name": "Planlens",
+  "sku": "planlens-pro",
+  "chosen": "Paid Cursor/VS Code extension that reviews Terraform and OpenTofu plan JSON in the editor.",
+  "why": "HashiCorp's official extension (6.6M installs) can run terraform plan but does not review the plan. Existing visualizers have 500–10k installs and require a manual JSON export. Companies already pay for Terraform Cloud, Spacelift, and Infracost, so willingness to pay for IaC review is real. The work is deterministic JSON parsing, not an AI wrapper. Dual-list on VS Code Marketplace and OpenVSX (Cursor).",
+  "rejected": [
+    "gRPC/API clients — crowded free tools (API Studio, Daakia, Thunder Client)",
+    "Prisma/Drizzle — official free Prisma extension; Drizzle is TypeScript-native",
+    "SBOM — enterprise incumbents (Sonatype, FossID)",
+    "OpenAPI breaking changes — oasdiff already owns CLI/CI; wrapping it is a commodity",
+    "Lockfile merge — solved by git merge drivers, weak willingness to pay",
+    "AI wrappers, trading, freelance, content farms — killed by constraints"
+  ],
+  "price_usd": {
+    "pro_one_time": 49,
+    "later_commercial": 99
+  },
+  "free": [
+    "Open terraform show -json / OpenTofu plan JSON",
+    "Create/update/delete/replace filters and search",
+    "Sensitive value redaction for plan-marked before_sensitive/after_sensitive (unmarked secrets can still appear)",
+    "Module grouping",
+    "Review of an opened plan JSON file does not contact Planlens infrastructure; plan JSON is not uploaded"
+  ],
+  "pro": [
+    "Run terraform or tofu plan from the editor and open the review",
+    "Copy a PR-ready markdown summary",
+    "Compare two plans",
+    "Danger digest (destroys, replacements, IAM/network/data stores)"
+  ],
+  "kill_if": "90 days after listing, fewer than 5 paid sales and no organic marketplace search traction. Do not buy ads. Do not spend the $500 on acquisition.",
+  "deferred_tests": [
+    "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
+    "Polar license validation with a real granted key"
+  ],
+  "user_needed_for": [
+    "Polar.sh KYC + Canadian CAD bank (payout) — done 2026-08-27",
+    "Polar Planlens Pro $49 one-time + license-key benefit — product created 2026-08-27",
+    "Polar checkout link — recorded in ops/STATE.json 2026-08-27 (not public site)",
+    "Polar organization id — recorded in ops/STATE.json 2026-08-27",
+    "Public GitHub repository (Issues + security) — current",
+    "Public GitHub repository (Issues + security) — launch blocker",
+    "One Cursor daily watch automation — launch blocker",
+    "Demonstrated unattended loop + simulated incident (ops/LAUNCH.md) — launch blocker",
+    "Microsoft VS Code Marketplace publisher agreement",
+    "OpenVSX publisher (Cursor)",
+    "Optional domain ~CAD $20 only if GitHub Pages is refused"
+  ],
+  "operating_model": "planlens/ops/README.md"
+}

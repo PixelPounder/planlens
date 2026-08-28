@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-27",
+  "customers_may_install": false,
+  "payout_complete_authorizes_listing": false,
+  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
+  "github_support_live": false,
+  "cursor_automation_created": false,
+  "unattended": {
+    "cursor_desktop_closed": "undemonstrated",
+    "machine_asleep": "undemonstrated",
+    "machine_offline": "undemonstrated",
+    "machine_restarted": "undemonstrated",
+    "scheduled_run_failed_and_recovered": "undemonstrated"
+  },
+  "simulated_incident": {
+    "status": "undemonstrated",
+    "issue_url": null,
+    "discovered_by": null,
+    "classified_as": null,
+    "surfaced_on": null,
+    "owner_interrupted": null
+  },
+  "evidence": []
+}
