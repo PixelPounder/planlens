@@ -1,11 +1,29 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-08-28T03:50:15.072Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "automation": {
+    "run_id": "bc-85d8a30e-c4dc-4d51-9bc8-b7f0ff02359f",
+    "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "trigger": "cron",
+    "schedule": "*/5 * * * *",
+    "source": "cursor_cloud"
+  },
+  "github_issues_checked": true,
+  "github_issues_open": [
+    {
+      "number": 3,
+      "title": "[drill] simulated support report — not a real customer",
+      "url": "https://github.com/PixelPounder/planlens/issues/3",
+      "labels": ["drill"],
+      "createdAt": "2026-08-28T03:01:30Z"
+    }
+  ],
+  "github_issues_note": "Listed via `gh issue list --json` (newest-first sort not supported by this gh version; single open issue).",
   "polar_checked": false,
+  "polar_note": "No Polar credentials in environment; skipped API.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx are not_listed in STATE.json; no listing URLs to fetch.",
   "signals": {
     "terraform": {
       "tag": "v1.16.0",
@@ -28,28 +46,18 @@
       "html_url": "https://github.com/hashicorp/vscode-terraform/releases/tag/v2.40.0"
     }
   },
-  "changed": [
+  "changed": [],
+  "errors": [
     {
-      "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
-    },
-    {
-      "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
+      "command": "gh issue list --sort created",
+      "error": "unknown flag: --sort (retried with --json successfully)"
     }
   ],
-  "errors": [],
+  "simulated_incident": {
+    "issue_number": 3,
+    "classified_as": "drill / SEV3",
+    "action": "commented on issue; updating PROOF.json; closing issue",
+    "owner_interrupt_required": false
+  },
   "owner_interrupt_required": false
 }
