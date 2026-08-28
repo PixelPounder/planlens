@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -14,12 +14,20 @@
     "scheduled_run_failed_and_recovered": "undemonstrated"
   },
   "simulated_incident": {
-    "status": "undemonstrated",
-    "issue_url": null,
-    "discovered_by": null,
-    "classified_as": null,
+    "status": "failed",
+    "issue_url": "https://github.com/PixelPounder/planlens/issues/3",
+    "discovered_by": "scheduled_automation bc-053a7c6e-38d9-4a8c-b486-f46361fb3e9f",
+    "classified_as": "drill / SEV3",
     "surfaced_on": null,
-    "owner_interrupted": null
+    "owner_interrupted": false,
+    "failure": "gh addComment denied (Resource not accessible by integration). Issue found and classified in last-run.json; could not post classification comment or close issue."
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-28T03:05:19.483Z",
+      "kind": "scheduled_watch",
+      "run_url": "https://cursor.com/agents/bc-053a7c6e-38d9-4a8c-b486-f46361fb3e9f",
+      "result": "public_signals_ok; drill_issue_found; gh_comment_failed"
+    }
+  ]
 }
