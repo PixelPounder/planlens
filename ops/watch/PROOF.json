@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-08-29",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
   "github_support_live": false,
-  "cursor_automation_created": false,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-08-29T15:14:30.000Z",
+      "scenario": "cursor_cloud_scheduled_cron",
+      "result": "passed",
+      "run_id": "bc-3d616bcf-d850-497c-81db-04a2cc4d64a0",
+      "run_url": "https://cursor.com/agents/bc-3d616bcf-d850-497c-81db-04a2cc4d64a0",
+      "note": "Hourly proof cron fired in Cursor Cloud. Public signals unchanged; 0 open issues; gh --sort flag error recorded and recovered."
+    }
+  ]
 }
