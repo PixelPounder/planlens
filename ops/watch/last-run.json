@@ -1,11 +1,30 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-08-29T15:13:52.245Z",
+  "completed_at": "2026-08-29T15:14:30.000Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "automation": {
+    "source": "cursor_automation_cron",
+    "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "run_id": "bc-3d616bcf-d850-497c-81db-04a2cc4d64a0",
+    "run_url": "https://cursor.com/agents/bc-3d616bcf-d850-497c-81db-04a2cc4d64a0",
+    "environment": "cursor_cloud",
+    "schedule": "0 15 * * *",
+    "triggered_at": "2026-08-29T15:13:33.957Z"
+  },
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues_note": "gh issue list succeeded (open issues, newest first via default API order). Initial attempt with unsupported --sort flag failed; retried without it.",
+  "github_issues": [],
+  "github_errors": [
+    {
+      "command": "gh issue list --sort created",
+      "error": "unknown flag: --sort"
+    }
+  ],
   "polar_checked": false,
+  "polar_note": "No Polar credentials in environment; skipped API.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx are not_listed in STATE.json; no listing URLs to fetch.",
   "signals": {
     "terraform": {
       "tag": "v1.16.0",
@@ -28,28 +47,14 @@
       "html_url": "https://github.com/hashicorp/vscode-terraform/releases/tag/v2.40.0"
     }
   },
-  "changed": [
-    {
-      "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
-    },
-    {
-      "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
-    }
-  ],
+  "changed": [],
   "errors": [],
-  "owner_interrupt_required": false
+  "severity": null,
+  "owner_interrupt_required": false,
+  "actions_taken": [
+    "Public-signal watch: no upstream release tag changes.",
+    "GitHub Issues: 0 open.",
+    "Polar API skipped (no token).",
+    "Marketplace pages skipped (not listed)."
+  ]
 }
