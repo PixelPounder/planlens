@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-01",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -14,12 +14,21 @@
     "scheduled_run_failed_and_recovered": "undemonstrated"
   },
   "simulated_incident": {
-    "status": "undemonstrated",
-    "issue_url": null,
-    "discovered_by": null,
-    "classified_as": null,
-    "surfaced_on": null,
-    "owner_interrupted": null
+    "status": "passed",
+    "issue_url": "https://github.com/PixelPounder/planlens/issues/3",
+    "discovered_by": "https://cursor.com/agents/bc-85d8a30e-c4dc-4d51-9bc8-b7f0ff02359f",
+    "classified_as": "drill / SEV3",
+    "surfaced_on": "https://github.com/PixelPounder/planlens/issues/3#issuecomment-5448171340",
+    "owner_interrupted": false
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-01T15:01:40.642Z",
+      "kind": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-a1b929f9-42cd-4cda-82a9-034979f6e85c",
+      "result": "passed",
+      "summary": "Routine watch: public signals unchanged; 0 open issues; Polar skipped (no creds); marketplaces not listed."
+    }
+  ]
 }
