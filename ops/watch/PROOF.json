@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-03",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
     "machine_offline": "undemonstrated",
     "machine_restarted": "undemonstrated",
-    "scheduled_run_failed_and_recovered": "undemonstrated"
+    "scheduled_run_failed_and_recovered": "undemonstrated",
+    "cursor_cloud_cron": "passed"
   },
   "simulated_incident": {
     "status": "undemonstrated",
@@ -21,5 +22,15 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-03T15:04:35.699Z",
+      "kind": "scheduled_cloud_watch",
+      "result": "passed",
+      "bc_id": "bc-07e3b637-a939-43a6-a85e-8c59b92232b8",
+      "url": "https://cursor.com/agents/bc-07e3b637-a939-43a6-a85e-8c59b92232b8",
+      "trigger": "cron 0 15 * * *",
+      "notes": "check.mjs OK; terraform v1.16.0→v1.16.1 and vscode 1.135.0→1.136.0 upstream releases; gh issues empty (first gh attempt failed unsupported --sort flag, recovered on retry); Polar skipped (no env creds); marketplaces not listed; no open issues; owner_interrupt_required false"
+    }
+  ]
 }
