@@ -1,16 +1,26 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-09-05T15:15:29.028Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues": [],
+  "github_issues_note": "Listed via gh issue list --json (newest by createdAt in output).",
   "polar_checked": false,
+  "polar_note": "No Polar credentials in environment; skipped API.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx not_listed in STATE.json; skipped fetch.",
+  "automation": {
+    "source": "cursor_cloud_cron",
+    "schedule": "0 15 * * *",
+    "triggered_at": "2026-09-05T15:15:08.484Z",
+    "bc_id": "bc-2b0caebb-69d1-4a6f-83f0-8a660f7e0119",
+    "url": "https://cursor.com/agents/bc-2b0caebb-69d1-4a6f-83f0-8a660f7e0119"
+  },
   "signals": {
     "terraform": {
-      "tag": "v1.16.0",
-      "published_at": "2026-08-26T13:05:28Z",
-      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.0"
+      "tag": "v1.16.1",
+      "published_at": "2026-09-02T14:49:32Z",
+      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.1"
     },
     "opentofu": {
       "tag": "v1.12.6",
@@ -18,9 +28,9 @@
       "html_url": "https://github.com/opentofu/opentofu/releases/tag/v1.12.6"
     },
     "vscode": {
-      "tag": "1.135.0",
-      "published_at": "2026-08-26T16:52:46Z",
-      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.135.0"
+      "tag": "1.136.1",
+      "published_at": "2026-09-03T15:25:32Z",
+      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.136.1"
     },
     "hashicorp-vscode-terraform": {
       "tag": "v2.40.0",
@@ -31,23 +41,13 @@
   "changed": [
     {
       "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
+      "from": "v1.16.0",
+      "to": "v1.16.1"
     },
     {
       "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
+      "from": "1.135.0",
+      "to": "1.136.1"
     }
   ],
   "errors": [],
