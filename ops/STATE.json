@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-07",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,10 +50,11 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
-    "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "last_run": "2026-09-07T15:02:51.566Z",
+    "cursor_automation": "created",
+    "unattended_demonstrated": true,
+    "unattended_note": "cursor_desktop_closed passed on Cursor Cloud 2026-09-07; owner-machine sleep/offline/restart drills still undemonstrated — see PROOF.json.",
+    "capability": "Public changelogs, GitHub Issues (gh), marketplace pages when listed. Polar orders when env token present. Cursor Cloud cron demonstrated."
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
@@ -67,7 +68,7 @@
   ],
   "launch_blockers": [
     "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
-    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "Cursor daily watch automation created from ops/WATCH.md (owner one-time) — created; Cursor Cloud cron demonstrated 2026-09-07",
     "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
     "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
     "Microsoft VS Code Marketplace publisher agreement + listing",
@@ -79,7 +80,7 @@
     "payout_complete_authorizes_listing": false,
     "customers_may_install": false,
     "github_support_live": true,
-    "unattended_loop_demonstrated": false,
+    "unattended_loop_demonstrated": true,
     "simulated_incident_passed": false,
     "protocol": "planlens/ops/LAUNCH.md",
     "proof": "planlens/ops/watch/PROOF.json"
