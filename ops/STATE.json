@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-10",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,10 +50,13 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-09-10T15:03:10.645Z",
+    "cursor_automation": "created",
+    "cursor_automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "cursor_automation_schedule": "0 15 * * *",
+    "execution_environment": "cursor_cloud",
     "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "capability": "Public changelogs, GitHub Issues (gh), marketplace pages when listed. Polar orders when token in session env. Cursor Cloud cron demonstrated 2026-09-10; owner-PC drills still undemonstrated — see LAUNCH.md."
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
@@ -66,8 +69,8 @@
     "Marketplace discovery is the main business failure mode."
   ],
   "launch_blockers": [
-    "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
-    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — done",
+    "Cursor daily watch automation created from ops/WATCH.md (owner one-time) — created 2026-09-09; hourly proof cadence; restore daily after proofs pass",
     "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
     "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
     "Microsoft VS Code Marketplace publisher agreement + listing",
@@ -79,6 +82,7 @@
     "payout_complete_authorizes_listing": false,
     "customers_may_install": false,
     "github_support_live": true,
+    "cursor_cloud_cron_demonstrated": true,
     "unattended_loop_demonstrated": false,
     "simulated_incident_passed": false,
     "protocol": "planlens/ops/LAUNCH.md",

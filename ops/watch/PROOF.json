@@ -1,11 +1,13 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-10",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
+  "cursor_automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+  "execution_environment": "cursor_cloud",
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +23,32 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-09T15:01:28.514Z",
+      "type": "scheduled_cloud_watch",
+      "result": "passed",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "cloud_agent_run": "https://cursor.com/agents/bc-9d9ed598-ffad-4a91-bcd6-17e2f4c8dbce",
+      "trigger": "cron 0 15 * * *",
+      "check_mjs": "ok — terraform v1.16.2, vscode 1.136.2 changed since prior run",
+      "gh_issues": "ok — 0 open",
+      "polar": "skipped — no credentials in environment",
+      "marketplace": "skipped — not listed",
+      "owner_interrupt_required": false
+    },
+    {
+      "at": "2026-09-10T15:03:10.645Z",
+      "type": "scheduled_cloud_watch",
+      "result": "passed",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "cloud_agent_run": "https://cursor.com/agents/bc-de018782-32f5-421c-b850-3f687ae509e6",
+      "trigger": "cron 0 15 * * *",
+      "check_mjs": "ok — vscode 1.137.0 changed since prior run; terraform unchanged at v1.16.2",
+      "gh_issues": "ok — 0 open",
+      "polar": "skipped — no credentials in environment",
+      "marketplace": "skipped — not listed",
+      "owner_interrupt_required": false
+    }
+  ]
 }
