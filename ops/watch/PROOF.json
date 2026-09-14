@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-14",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -14,12 +14,21 @@
     "scheduled_run_failed_and_recovered": "undemonstrated"
   },
   "simulated_incident": {
-    "status": "undemonstrated",
-    "issue_url": null,
-    "discovered_by": null,
-    "classified_as": null,
-    "surfaced_on": null,
-    "owner_interrupted": null
+    "status": "passed",
+    "issue_url": "https://github.com/PixelPounder/planlens/issues/3",
+    "discovered_by": "prior_scheduled_run",
+    "classified_as": "drill / SEV3",
+    "surfaced_on": "github_issue_comment",
+    "owner_interrupted": false
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-14T15:03:50.348Z",
+      "kind": "scheduled_cloud_watch",
+      "run_url": "https://cursor.com/agents/bc-e2327347-495d-4bf2-a2da-6be8d8b2d232",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "result": "passed",
+      "notes": "Cron fired in Cursor Cloud without owner chat. check.mjs OK; gh issue list OK (0 open); Polar skipped (no token); marketplaces not listed. Signal bumps: terraform v1.16.0→v1.16.2, vscode 1.135.0→1.137.0. No SEV0/SEV1; owner interrupt not required."
+    }
+  ]
 }
