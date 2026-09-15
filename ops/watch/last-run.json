@@ -1,16 +1,33 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-09-15T15:01:54.709Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "automation": {
+    "source": "cursor_automation_cron",
+    "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "schedule": "0 15 * * *",
+    "triggered_at": "2026-09-15T15:00:49.660Z",
+    "run_url": "https://cursor.com/agents/bc-3b2673e6-da39-467d-baa5-050bd9bbc52d",
+    "execution": "cursor_cloud"
+  },
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues": [],
+  "github_command_errors": [
+    {
+      "command": "gh issue list --repo PixelPounder/planlens --state open --sort created --limit 20",
+      "error": "unknown flag: --sort",
+      "recovered": "gh issue list --repo PixelPounder/planlens --state open --json number,title,createdAt,url --limit 20"
+    }
+  ],
   "polar_checked": false,
+  "polar_skip_reason": "No POLAR_ACCESS_TOKEN or POLAR_API_KEY in environment",
   "marketplace_checked": false,
+  "marketplace_skip_reason": "STATE.marketplaces.vscode and openvsx are not_listed; no listing URLs to fetch",
   "signals": {
     "terraform": {
-      "tag": "v1.16.0",
-      "published_at": "2026-08-26T13:05:28Z",
-      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.0"
+      "tag": "v1.16.2",
+      "published_at": "2026-09-09T13:22:31Z",
+      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.2"
     },
     "opentofu": {
       "tag": "v1.12.6",
@@ -18,9 +35,9 @@
       "html_url": "https://github.com/opentofu/opentofu/releases/tag/v1.12.6"
     },
     "vscode": {
-      "tag": "1.135.0",
-      "published_at": "2026-08-26T16:52:46Z",
-      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.135.0"
+      "tag": "1.137.0",
+      "published_at": "2026-09-09T15:32:58Z",
+      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.137.0"
     },
     "hashicorp-vscode-terraform": {
       "tag": "v2.40.0",
@@ -31,25 +48,17 @@
   "changed": [
     {
       "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
+      "from": "v1.16.0",
+      "to": "v1.16.2"
     },
     {
       "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
+      "from": "1.135.0",
+      "to": "1.137.0"
     }
   ],
   "errors": [],
-  "owner_interrupt_required": false
+  "owner_interrupt_required": false,
+  "severity": null,
+  "notes": "Scheduled hourly proof run. No open issues. No drill issues. Marketplace not listed. Polar API skipped."
 }
