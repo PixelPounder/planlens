@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-18",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-18T15:13:45.679Z",
+      "scenario": "scheduled_cursor_cloud_watch",
+      "result": "passed",
+      "run_url": "https://cursor.com/agents/bc-b5e8daee-dd9c-4266-90e5-e2f76b955380",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "notes": "Cron-fired automation in Cursor Cloud. check.mjs ran; gh listed 0 open issues; Polar skipped (no env creds); marketplaces not listed. Minor gh --sort flag error on first attempt, recovered on retry."
+    }
+  ]
 }
