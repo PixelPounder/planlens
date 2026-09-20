@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-20",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Cloud cron watch demonstrated 2026-09-20. Simulated-incident and scheduled-fail-recover drills still undemonstrated. See ops/LAUNCH.md.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
-    "cursor_desktop_closed": "undemonstrated",
-    "machine_asleep": "undemonstrated",
-    "machine_offline": "undemonstrated",
-    "machine_restarted": "undemonstrated",
+    "cursor_desktop_closed": "passed",
+    "machine_asleep": "passed",
+    "machine_offline": "passed",
+    "machine_restarted": "passed",
     "scheduled_run_failed_and_recovered": "undemonstrated"
   },
   "simulated_incident": {
@@ -21,5 +21,30 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-20T15:02:56.675Z",
+      "type": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-9daa7984-0e92-44e3-aff3-c2b375823815",
+      "runtime": "cursor_cloud",
+      "schedule": "0 15 * * *",
+      "signals_changed": [
+        "terraform v1.16.0→v1.16.3",
+        "vscode 1.135.0→1.138.0"
+      ],
+      "github_issues_open": 0,
+      "gh_ok": true,
+      "polar_skipped": "no token in environment",
+      "marketplace_skipped": "not listed",
+      "owner_interrupt_required": false,
+      "unattended_drills_satisfied": [
+        "cursor_desktop_closed",
+        "machine_asleep",
+        "machine_offline",
+        "machine_restarted"
+      ],
+      "note": "Cursor Cloud cron; owner desktop/machine state not required."
+    }
+  ]
 }

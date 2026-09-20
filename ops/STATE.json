@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-20",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,10 +50,10 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-09-20T15:02:56.675Z",
+    "cursor_automation": "created",
     "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "capability": "Public changelogs, GitHub Issues via gh, Polar orders when token present in session. Cursor Cloud cron demonstrated 2026-09-20; simulated-incident and fail-recover drills still open — see PROOF.json."
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
