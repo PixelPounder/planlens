@@ -70,7 +70,7 @@
   ],
   "launch_blockers": [
     "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
-    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "Cursor daily watch automation created from ops/WATCH.md — created (3d19f091-a27c-11f1-b532-320a589b8025); owner-machine unattended drills still undemonstrated",
     "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
     "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
     "Microsoft VS Code Marketplace publisher agreement + listing",
