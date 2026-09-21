@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-21",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Every scenario starts undemonstrated except where evidence records a passed scheduled cloud run. Interactive sessions do not count. See ops/LAUNCH.md.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,23 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-21T15:07:06.309Z",
+      "kind": "scheduled_cloud_watch",
+      "result": "passed",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-0f508ccb-b7c2-4454-9562-81b158c760fc",
+      "environment": "cursor_cloud",
+      "signals_changed": [
+        "terraform v1.16.0→v1.16.3",
+        "vscode 1.135.0→1.138.0"
+      ],
+      "github_issues_open": 0,
+      "polar_checked": false,
+      "marketplace_checked": false,
+      "owner_interrupted": false,
+      "notes": "First scheduled Cursor Cloud cron watch. gh --sort unsupported; retried with --json. No SEV0/SEV1. Launch owner-machine drills and simulated incident still pending."
+    }
+  ]
 }
