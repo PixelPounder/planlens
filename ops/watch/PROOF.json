@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-22",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Every scenario starts undemonstrated until passed on a scheduled automation run. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,15 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-22T15:09:53.366Z",
+      "kind": "scheduled_watch",
+      "result": "passed",
+      "run_id": "bc-02d7e166-ad60-4c7a-8aec-da6f0737451a",
+      "run_url": "https://cursor.com/agents/bc-02d7e166-ad60-4c7a-8aec-da6f0737451a",
+      "environment": "cursor_cloud",
+      "notes": "Cron automation; check.mjs OK; gh issues empty; gh --sort unsupported (recorded in last-run); Polar token absent; marketplaces not listed."
+    }
+  ]
 }
