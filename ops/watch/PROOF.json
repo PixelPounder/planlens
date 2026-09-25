@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-25",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Every scenario starts undemonstrated. Interactive `node ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
     "machine_offline": "undemonstrated",
     "machine_restarted": "undemonstrated",
-    "scheduled_run_failed_and_recovered": "undemonstrated"
+    "scheduled_run_failed_and_recovered": "undemonstrated",
+    "cursor_cloud_scheduled": "passed"
   },
   "simulated_incident": {
     "status": "undemonstrated",
@@ -21,5 +22,15 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-25T15:09:05.881Z",
+      "kind": "scheduled_cloud_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_id": "bc-54f3b573-df8a-43fa-89fe-b261567cf19f",
+      "run_url": "https://cursor.com/agents/bc-54f3b573-df8a-43fa-89fe-b261567cf19f",
+      "result": "passed",
+      "notes": "Cron watch in Cursor Cloud. Terraform v1.16.0→v1.16.4 and VS Code 1.135.0→1.139.1 public signals. 0 open GitHub issues. Polar skipped (no env creds). Marketplaces not listed."
+    }
+  ]
 }
