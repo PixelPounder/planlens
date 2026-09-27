@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-27",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-09-27T15:17:45.874Z",
+      "scenario": "cursor_cloud_scheduled_cron",
+      "result": "passed_with_errors",
+      "run_id": "bc-92e08ff2-766d-433e-98b6-20d5ff84660d",
+      "run_url": "https://cursor.com/agents/bc-92e08ff2-766d-433e-98b6-20d5ff84660d",
+      "note": "Hourly proof cron in Cursor Cloud. check.mjs OK (terraform v1.16.4, vscode 1.139.1). gh issue list HTTP 401 recorded in last-run errors; 0 open issues via public API. Polar skipped. LAUNCH owner-machine drills still undemonstrated."
+    }
+  ]
 }
