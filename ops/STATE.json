@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-29",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,10 +50,12 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-09-29T15:19:59.915Z",
+    "cursor_automation": "created",
     "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "last_automation_run": "https://cursor.com/agents/bc-831cfafb-26c4-45d8-b8a9-9619e85c5a97",
+    "last_run_gh_error": "HTTP 401: Bad credentials",
+    "capability": "Public release tags via check.mjs; GitHub Issues require gh auth in the automation environment; Polar orders require POLAR_ACCESS_TOKEN in session (never git). Last scheduled run: Cursor Cloud cron."
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
@@ -67,7 +69,7 @@
   ],
   "launch_blockers": [
     "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
-    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "Cursor daily watch automation: created (hourly proof cron on Cursor Cloud; restore daily cadence after LAUNCH proofs pass)",
     "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
     "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
     "Microsoft VS Code Marketplace publisher agreement + listing",

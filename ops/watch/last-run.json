@@ -1,16 +1,27 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-09-29T15:19:59.915Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
-  "github_issues_checked": false,
-  "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
+  "github_issues_checked": true,
+  "github_issues_error": "HTTP 401: Bad credentials (gh issue list)",
+  "github_issues_note": "Scheduled automation attempted `gh issue list`; auth missing in cloud environment.",
   "polar_checked": false,
+  "polar_note": "POLAR_ACCESS_TOKEN unset; skipped Polar API.",
   "marketplace_checked": false,
+  "marketplace_note": "vscode and openvsx are not_listed in STATE.json; no listing URLs to fetch.",
+  "automation": {
+    "source": "cursor_automation_cron",
+    "schedule": "0 15 * * *",
+    "triggered_at": "2026-09-29T15:18:51.223Z",
+    "run_url": "https://cursor.com/agents/bc-831cfafb-26c4-45d8-b8a9-9619e85c5a97",
+    "bc_id": "bc-831cfafb-26c4-45d8-b8a9-9619e85c5a97",
+    "runtime": "cursor_cloud"
+  },
   "signals": {
     "terraform": {
-      "tag": "v1.16.0",
-      "published_at": "2026-08-26T13:05:28Z",
-      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.0"
+      "tag": "v1.16.4",
+      "published_at": "2026-09-23T12:44:16Z",
+      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.4"
     },
     "opentofu": {
       "tag": "v1.12.6",
@@ -18,9 +29,9 @@
       "html_url": "https://github.com/opentofu/opentofu/releases/tag/v1.12.6"
     },
     "vscode": {
-      "tag": "1.135.0",
-      "published_at": "2026-08-26T16:52:46Z",
-      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.135.0"
+      "tag": "1.139.1",
+      "published_at": "2026-09-25T09:58:03Z",
+      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.139.1"
     },
     "hashicorp-vscode-terraform": {
       "tag": "v2.40.0",
@@ -31,25 +42,21 @@
   "changed": [
     {
       "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
-      "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
+      "from": "v1.16.0",
+      "to": "v1.16.4"
     },
     {
       "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
+      "from": "1.135.0",
+      "to": "1.139.1"
     }
   ],
-  "errors": [],
-  "owner_interrupt_required": false
+  "errors": [
+    {
+      "id": "github_issues",
+      "error": "HTTP 401: Bad credentials"
+    }
+  ],
+  "owner_interrupt_required": false,
+  "all_clear": false
 }
