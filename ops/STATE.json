@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-09-30",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,10 +50,12 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-09-30T15:19:52.132Z",
+    "cursor_automation": "created",
+    "cursor_automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "last_automation_run": "https://cursor.com/agents/bc-5a35e82a-d524-4ad0-916b-52d25706964b",
     "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "capability": "Public release tags via check.mjs; GitHub Issues need valid gh auth on the automation environment. Polar orders need POLAR_ACCESS_TOKEN in env (never git). LAUNCH.md drills still undemonstrated."
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
@@ -67,7 +69,7 @@
   ],
   "launch_blockers": [
     "Public GitHub repository with Issues enabled, SECURITY.md, issue templates, and URL written into STATE.json, package.json bugs.url, site, README — repo created; push pending if files not on GitHub yet",
-    "Cursor daily watch automation created from ops/WATCH.md (owner one-time)",
+    "Cursor daily watch automation created from ops/WATCH.md (owner one-time) — cron firing in Cursor Cloud; LAUNCH unattended drills not yet passed",
     "ops/LAUNCH.md proofs passed and recorded in ops/watch/PROOF.json (unattended loop: Cursor closed, machine asleep/offline/restarted, failed scheduled run; plus one harmless GitHub→watch simulated incident). Interactive watch runs do not count.",
     "Polar organization id recorded; checkout URL recorded; neither baked into package.json or public site yet",
     "Microsoft VS Code Marketplace publisher agreement + listing",
