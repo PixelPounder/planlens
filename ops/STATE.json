@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-02",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,8 +50,8 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-10-02T15:00:43.195Z",
+    "cursor_automation": "created",
     "unattended_demonstrated": false,
     "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
   },
