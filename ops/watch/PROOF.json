@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-03",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
     "machine_offline": "undemonstrated",
     "machine_restarted": "undemonstrated",
-    "scheduled_run_failed_and_recovered": "undemonstrated"
+    "scheduled_run_failed_and_recovered": "partial_gh_401_recorded_2026-10-03_recovery_pending"
   },
   "simulated_incident": {
     "status": "undemonstrated",
@@ -21,5 +21,21 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-03T15:00:49.234Z",
+      "kind": "scheduled_watch",
+      "runtime": "cursor_cloud",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-d0f28994-2085-489b-aaa0-13846ae55af2",
+      "check_mjs": "ok",
+      "signal_changes": ["terraform v1.16.5", "opentofu v1.13.1", "vscode 1.140.0"],
+      "gh_issue_list": "failed HTTP 401",
+      "open_issues_public_api": 0,
+      "polar_api": "skipped_no_token",
+      "marketplaces": "not_listed",
+      "all_clear": false,
+      "owner_interrupted": false
+    }
+  ]
 }
