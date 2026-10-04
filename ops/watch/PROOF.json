@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-04",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
   "github_support_live": false,
-  "cursor_automation_created": false,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,13 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-04T15:00:51.924Z",
+      "kind": "scheduled_watch",
+      "result": "partial",
+      "run_url": "https://cursor.com/agents/bc-8bb16fcd-8ca1-4694-bd4e-87848916b950",
+      "notes": "check.mjs OK; public signals changed (terraform, opentofu, vscode). gh issue list failed HTTP 401 — not all-clear."
+    }
+  ]
 }
