@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-14",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Every scenario starts undemonstrated until LAUNCH.md drills pass. Interactive `node planlens/ops/watch/check.mjs` does not count.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-14T15:03:09.623Z",
+      "kind": "cursor_cloud_cron_watch",
+      "run_url": "https://cursor.com/agents/bc-063b054e-8ece-4ffa-b7b6-d39eedd07868",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "result": "partial",
+      "notes": "Public-signal check.mjs succeeded (terraform/opentofu/vscode tag changes). gh issue list failed HTTP 401 (no gh auth in cloud). Polar skipped (no token). Marketplaces not listed. Does not pass LAUNCH.md owner-machine unattended rows."
+    }
+  ]
 }
