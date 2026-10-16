@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-16",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
-  "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "note": "Interactive `node ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
-    "cursor_desktop_closed": "undemonstrated",
+    "cursor_desktop_closed": "passed",
+    "cursor_desktop_closed_note": "Cursor Cloud scheduled automation run 2026-10-16T15:00Z; owner desktop not required.",
     "machine_asleep": "undemonstrated",
     "machine_offline": "undemonstrated",
     "machine_restarted": "undemonstrated",
-    "scheduled_run_failed_and_recovered": "undemonstrated"
+    "scheduled_run_failed_and_recovered": "undemonstrated",
+    "scheduled_run_failed_and_recovered_note": "gh 401 recorded on 2026-10-16 run; recovery drill not complete until a later run succeeds with gh or an explicit pass criterion for public API fallback."
   },
   "simulated_incident": {
     "status": "undemonstrated",
@@ -21,5 +23,18 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-16T15:00:57.530Z",
+      "kind": "scheduled_watch",
+      "run_url": "https://cursor.com/agents/bc-4cd43701-93ba-4f42-b831-ae61a54f211b",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "check_mjs": "ok",
+      "gh_issue_list": "failed_401",
+      "open_support_issues": 0,
+      "polar": "skipped_no_token",
+      "marketplace": "skipped_not_listed",
+      "owner_interrupt": false
+    }
+  ]
 }
