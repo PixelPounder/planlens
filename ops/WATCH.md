@@ -38,7 +38,7 @@ When a watch session starts:
 
 1. Read `ops/STATE.json` and `ops/AUTHORITY.md`.
 2. Run `node planlens/ops/watch/check.mjs` from the workspace root (or `planlens/ops/watch`).
-3. If `support.public_inbox` is set and `gh` works: list open issues, newest first.
+3. If `support.public_inbox` is set and `gh` works: list open issues, newest first. If `gh` returns 401 with an invalid `GH_TOKEN`, unset `GH_TOKEN` and retry once (record the failure in `last-run.json`; do not claim all-clear).
 4. If listed: fetch marketplace listing pages recorded in STATE; update install/rating counts.
 5. If Polar org id is known and a Polar token exists **in the environment** (never git): list new orders/refunds since `metrics`.
 6. Write `ops/watch/last-run.json` and update STATE metrics.
