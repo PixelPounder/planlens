@@ -1,26 +1,26 @@
 {
-  "ran_at": "2026-08-27T11:58:24.639Z",
+  "ran_at": "2026-10-21T15:04:11.728Z",
   "script": "planlens/ops/watch/check.mjs",
-  "support_inbox": null,
+  "support_inbox": "https://github.com/PixelPounder/planlens/issues",
   "github_issues_checked": false,
   "github_issues_note": "This script does not call gh. Daily automation should run `gh issue list` when the public repo exists.",
   "polar_checked": false,
   "marketplace_checked": false,
   "signals": {
     "terraform": {
-      "tag": "v1.16.0",
-      "published_at": "2026-08-26T13:05:28Z",
-      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.0"
+      "tag": "v1.16.6",
+      "published_at": "2026-10-14T09:31:54Z",
+      "html_url": "https://github.com/hashicorp/terraform/releases/tag/v1.16.6"
     },
     "opentofu": {
-      "tag": "v1.12.6",
-      "published_at": "2026-08-19T11:40:07Z",
-      "html_url": "https://github.com/opentofu/opentofu/releases/tag/v1.12.6"
+      "tag": "v1.13.2",
+      "published_at": "2026-10-21T14:36:09Z",
+      "html_url": "https://github.com/opentofu/opentofu/releases/tag/v1.13.2"
     },
     "vscode": {
-      "tag": "1.135.0",
-      "published_at": "2026-08-26T16:52:46Z",
-      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.135.0"
+      "tag": "1.142.0",
+      "published_at": "2026-10-14T19:46:12Z",
+      "html_url": "https://github.com/microsoft/vscode/releases/tag/1.142.0"
     },
     "hashicorp-vscode-terraform": {
       "tag": "v2.40.0",
@@ -30,26 +30,39 @@
   },
   "changed": [
     {
-      "id": "terraform",
-      "from": null,
-      "to": "v1.16.0"
-    },
-    {
       "id": "opentofu",
-      "from": null,
-      "to": "v1.12.6"
-    },
-    {
-      "id": "vscode",
-      "from": null,
-      "to": "1.135.0"
-    },
-    {
-      "id": "hashicorp-vscode-terraform",
-      "from": null,
-      "to": "v2.40.0"
+      "from": "v1.13.1",
+      "to": "v1.13.2"
     }
   ],
   "errors": [],
-  "owner_interrupt_required": false
+  "owner_interrupt_required": false,
+  "automation": {
+    "kind": "cursor_cloud_cron",
+    "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "run_id": "bc-91531aba-dd8f-4214-9510-113bc814291e",
+    "run_url": "https://cursor.com/agents/bc-91531aba-dd8f-4214-9510-113bc814291e",
+    "triggered_at": "2026-10-21T15:03:51.126Z"
+  },
+  "gh_issue_list": {
+    "attempted": true,
+    "ok": false,
+    "error": "HTTP 401: Bad credentials (gh issue list)"
+  },
+  "github_issues_public_api": {
+    "attempted": true,
+    "ok": true,
+    "open_support_issues": 0,
+    "note": "Excludes pull requests; newest-first sort."
+  },
+  "polar_api": {
+    "attempted": false,
+    "skipped_reason": "POLAR_ACCESS_TOKEN unset in environment"
+  },
+  "marketplaces": {
+    "attempted": false,
+    "skipped_reason": "vscode and openvsx not_listed in STATE.json"
+  },
+  "all_clear": false,
+  "all_clear_note": "gh authentication failed; Polar and marketplace checks skipped. Public release watch succeeded."
 }

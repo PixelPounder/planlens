@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-21",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,18 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-21T15:04:11.728Z",
+      "kind": "scheduled_cursor_cloud_watch",
+      "run_id": "bc-91531aba-dd8f-4214-9510-113bc814291e",
+      "signals_changed": ["opentofu v1.13.1→v1.13.2"],
+      "gh_issue_list_ok": false,
+      "open_support_issues": 0,
+      "polar_checked": false,
+      "marketplace_checked": false,
+      "all_clear": false,
+      "owner_interrupt_required": false
+    }
+  ]
 }
