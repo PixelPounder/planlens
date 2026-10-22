@@ -46,7 +46,7 @@
       "public_api_open_issues": 0,
       "signal_changes": "terraform v1.17.0; opentofu v1.13.2; vscode 1.143.0",
       "all_clear": false,
-      "commit": "e9e1790"
+      "commit": "2749c14"
     }
   ]
 }
