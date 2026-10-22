@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-22",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,32 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-20T15:05:56.257Z",
+      "kind": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "runner": "cursor_cloud",
+      "trigger": "cron",
+      "check_mjs": "ok",
+      "gh_issue_list": "failed_http_401",
+      "all_clear": false,
+      "commit": "ca098da"
+    },
+    {
+      "at": "2026-10-22T15:00:28.198Z",
+      "kind": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_id": "bc-21d448f3-d988-4bac-b53c-756b972cbcb9",
+      "run_url": "https://cursor.com/agents/bc-21d448f3-d988-4bac-b53c-756b972cbcb9",
+      "runner": "cursor_cloud",
+      "trigger": "cron",
+      "check_mjs": "ok",
+      "gh_issue_list": "failed_http_401",
+      "public_api_open_issues": 0,
+      "signal_changes": "terraform v1.17.0; opentofu v1.13.2; vscode 1.143.0",
+      "all_clear": false,
+      "commit": "e9e1790"
+    }
+  ]
 }
