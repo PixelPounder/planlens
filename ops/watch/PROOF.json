@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-23",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,22 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-23T15:04:08.804Z",
+      "kind": "scheduled_cursor_cloud_watch",
+      "run_id": "bc-d0b208f7-57ee-49a0-ad55-e1b8f22ae0c6",
+      "signals_changed": [
+        "terraform v1.16.0→v1.17.0",
+        "opentofu v1.12.6→v1.13.2",
+        "vscode 1.135.0→1.143.1"
+      ],
+      "gh_issue_list_ok": false,
+      "open_support_issues": 0,
+      "polar_checked": false,
+      "marketplace_checked": false,
+      "all_clear": false,
+      "owner_interrupt_required": false
+    }
+  ]
 }
