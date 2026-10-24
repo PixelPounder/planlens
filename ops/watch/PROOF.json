@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-24",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
   "github_support_live": false,
-  "cursor_automation_created": false,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-24T15:01:56.947Z",
+      "kind": "scheduled_watch",
+      "runner": "cursor_automation_cron",
+      "result": "partial",
+      "note": "check.mjs OK (terraform/opentofu/vscode upstream tags changed). gh issue list 401 — inbox not scanned. Polar skipped (no env token). Marketplaces not listed.",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025"
+    }
+  ]
 }
