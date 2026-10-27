@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-27",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,19 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-27T15:00:33.205Z",
+      "kind": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-babdde60-b01a-4b21-94fb-07e0d0d175a2",
+      "runtime": "cursor_cloud",
+      "check_mjs": "ok",
+      "gh_issue_list": "HTTP 401 Bad credentials",
+      "polar": "skipped_no_env_credentials",
+      "marketplace": "skipped_not_listed",
+      "owner_interrupt_required": false,
+      "all_clear": false
+    }
+  ]
 }
