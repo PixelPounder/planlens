@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-10-30",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,14 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-10-30T15:05:06.250Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-d71be14f-8c28-4d6b-83ff-b066f70f5bfa",
+      "notes": "Cursor Cloud cron: check.mjs OK (signals unchanged since 2026-10-29). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open). Polar skipped (no token). Marketplaces not listed."
+    }
+  ]
 }
