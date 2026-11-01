@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-11-01",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -50,8 +50,10 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
-    "cursor_automation": "not_created",
+    "last_run": "2026-11-01T15:03:53.648Z",
+    "cursor_automation": "created",
+    "cursor_automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+    "last_automation_run_url": "https://cursor.com/agents/bc-03dcf5aa-cf2d-466d-8f8d-87ccc99eb033",
     "unattended_demonstrated": false,
     "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
   },
