@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-11-04",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
@@ -21,5 +21,13 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-11-04T15:03:19.628Z",
+      "kind": "scheduled_watch",
+      "cursor_run_url": "https://cursor.com/agents/bc-a614a67e-429f-40db-bfe8-5978309fa180",
+      "result": "partial",
+      "note": "Cursor Cloud cron fired; public signals fetched; 0 open support issues (REST); gh CLI 401 recorded — not all-clear; Polar skipped; marketplaces not listed."
+    }
+  ]
 }
