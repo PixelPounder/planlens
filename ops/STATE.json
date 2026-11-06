@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-11-06",
   "phase": "github_support_repo_created",
   "product": {
     "name": "Planlens",
@@ -33,7 +33,8 @@
     "checkout_url_allowlisted": true,
     "kyc": "identity_verified",
     "payout_account": "connected",
-    "describe_what_you_sell": "completed_by_owner_text_not_captured"
+    "describe_what_you_sell": "completed_by_owner_text_not_captured",
+    "listing_approval": "not_listed"
   },
   "marketplaces": {
     "vscode": "not_listed",
@@ -50,10 +51,12 @@
   },
   "watch": {
     "script": "planlens/ops/watch/check.mjs",
-    "last_run": "2026-08-27T11:58:24.639Z",
+    "last_run": "2026-11-06T15:02:16.866Z",
     "cursor_automation": "not_created",
     "unattended_demonstrated": false,
-    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md."
+    "capability": "Public changelogs only until GitHub repo + gh auth + Polar org id exist. Cloud vs local execution is undemonstrated — see LAUNCH.md.",
+    "gh_authenticated": false,
+    "last_gh_error": "2026-11-06: HTTP 401 Bad credentials — issue list skipped"
   },
   "deferred_tests": [
     "Run Plan against a real terraform/tofu binary in a trusted throwaway folder",
