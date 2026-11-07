@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-11-07",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,15 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-11-07T15:03:53.561Z",
+      "kind": "scheduled_watch",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_id": "bc-c9473620-af09-4952-a728-41a6f85920ae",
+      "run_url": "https://cursor.com/agents/bc-c9473620-af09-4952-a728-41a6f85920ae",
+      "result": "completed_with_gh_token_error",
+      "note": "Cursor Cloud cron fired; check.mjs OK; 0 open issues (gh with GH_TOKEN unset); GH_TOKEN env 401"
+    }
+  ]
 }
