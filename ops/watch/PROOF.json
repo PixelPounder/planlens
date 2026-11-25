@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-27",
+  "updated": "2026-11-25",
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
-  "cursor_automation_created": false,
+  "github_support_live": true,
+  "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
     "machine_asleep": "undemonstrated",
@@ -21,5 +21,102 @@
     "surfaced_on": null,
     "owner_interrupted": null
   },
-  "evidence": []
+  "evidence": [
+    {
+      "at": "2026-11-14T15:02:08.866Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-8a57b42c-0b97-481c-ab03-222833519997",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-13). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-15T15:03:19.238Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-6e4e71f4-25fc-4a71-9b74-949192796d2d",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-14). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-16T15:03:19.238Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-a06e3aa5-b246-40de-8e66-bcd2e779eedc",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-15). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-17T15:02:31.490Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-ec16c49a-6646-4162-ba78-e6e912b8157f",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-16). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-18T15:00:51.964Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-21446dc8-cad9-4fab-bc97-26b78fd98adc",
+      "notes": "Cursor Cloud cron: check.mjs OK (vscode 1.146.0→1.147.0; other upstream tags unchanged vs 2026-11-17). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-19T15:04:21.184Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-4b02a808-6d41-4f4b-9a5f-6b68bc3dc8df",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-18). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-20T15:01:41.991Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-a7b914a5-15eb-41ac-95de-1df21a6b3f0f",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-19). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-21T15:02:21.536Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-faba4e8d-0775-4087-b5dd-43139a8ef346",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-20). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-22T15:03:22.207Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-8a8d8f9c-75f0-4aa4-bdbd-fd1ca4d6cf3c",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-21). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-23T15:02:31.962Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-9268ff1e-b417-4974-af12-f9317e9abcfa",
+      "notes": "Cursor Cloud cron: check.mjs OK (upstream tags unchanged vs 2026-11-22). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-24T15:02:02.790Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-0059761d-22c4-4bcd-8a07-3e28434e65b7",
+      "notes": "Cursor Cloud cron: check.mjs OK (opentofu v1.13.9→v1.13.10; other upstream tags unchanged vs 2026-11-23). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    },
+    {
+      "at": "2026-11-25T15:00:58.144Z",
+      "kind": "scheduled_watch",
+      "result": "passed_with_errors",
+      "automation_id": "3d19f091-a27c-11f1-b532-320a589b8025",
+      "run_url": "https://cursor.com/agents/bc-25cb66cd-3906-4de9-975a-9c7291f426bc",
+      "notes": "Cursor Cloud cron: check.mjs OK (vscode 1.147.0→1.148.0; other upstream tags unchanged vs 2026-11-24). gh 401 when GH_TOKEN set; issue list OK with GH_TOKEN unset (0 open support issues). Polar skipped (no token). Marketplaces not listed."
+    }
+  ]
 }
