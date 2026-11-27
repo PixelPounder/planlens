@@ -4,7 +4,7 @@
   "customers_may_install": false,
   "payout_complete_authorizes_listing": false,
   "note": "Every scenario starts undemonstrated. Interactive `node planlens/ops/watch/check.mjs` does not count. See ops/LAUNCH.md.",
-  "github_support_live": false,
+  "github_support_live": true,
   "cursor_automation_created": true,
   "unattended": {
     "cursor_desktop_closed": "undemonstrated",
